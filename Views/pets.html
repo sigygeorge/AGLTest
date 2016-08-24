@@ -1,0 +1,14 @@
+﻿
+  
+    <div >
+       
+        <span ng-repeat="ownerByGender in petsToFilter() | filter : filterGenders">
+            <b>{{ownerByGender.gender}}</b>
+            <ul ng-repeat="pet in pets | filter : { gender : ownerByGender.gender, type :'Cat'} : true | orderBy : 'name'">
+                <li>{{pet.name}}</li>
+            </ul>
+       </span>
+      
+    </div>
+
+   
